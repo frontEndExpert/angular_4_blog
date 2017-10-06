@@ -1,4 +1,4 @@
-# angular_4_blog
+# angular4-blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 

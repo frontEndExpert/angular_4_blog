@@ -14,6 +14,7 @@ export class PostsComponent implements OnInit {
   pagedPosts = [];
   postsLoading;
   currentPost;
+  hidediv = false;
   pageSize = 10;
 
   constructor(private _postsService: PostsService) { }
@@ -43,8 +44,13 @@ export class PostsComponent implements OnInit {
 
   select(post){
   this.currentPost = post; 
+  this.hidediv = true;
+  
   } 
 
+  goback(){
+    this.hidediv = false;
+  }
   onPageChanged(page) {
       var startIndex = (page - 1) * this.pageSize;
       this.pagedPosts = _.take(_.rest(this.posts, startIndex), this.pageSize);

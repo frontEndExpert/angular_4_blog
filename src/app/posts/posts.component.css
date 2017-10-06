@@ -7,3 +7,18 @@
     border-color: #ecf0f1; 
     color: #2c3e50;
 }
+
+.extraclass { visibility: hidden; }
+
+#postslist{
+    position: absolute;
+    top: 0px;
+}
+
+#postbody{
+    position: absolute;
+    top: 0px;
+}
+.postscontainer{
+    position: relative;
+}

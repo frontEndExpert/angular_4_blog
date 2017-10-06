@@ -5,10 +5,11 @@ import { HttpModule }   from '@angular/http';
 import { PostsComponent } from './posts.component';
 import { PostsService }   from './posts.service';
 import { SharedModule } from '../shared/shared.module';
+import { PostComponent } from './post.component';
 
 
 @NgModule({
-  declarations: [ PostsComponent ],
+  declarations: [ PostsComponent, PostComponent ],
   imports: [
     BrowserModule,
     HttpModule,

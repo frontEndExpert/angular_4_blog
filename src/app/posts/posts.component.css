@@ -22,3 +22,22 @@
 .postscontainer{
     position: relative;
 }
+.mybtn{
+    margin: 20px 0;
+    width: fit-content;
+    padding: 6px 12px;
+    margin-left: 0px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.nav{
+    text-align: center;
+}
+.material-icon{
+    font-size:32px;
+    color: red;
+}

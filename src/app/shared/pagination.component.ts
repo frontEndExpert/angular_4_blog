@@ -3,26 +3,10 @@ import { OnChanges } from '@angular/core';
 
 @Component({
 	selector: 'app-pagination',
-    template: `
-    <nav *ngIf="items.length > pageSize">
-        <ul class="pagination">
-            <li [class.disabled]="currentPage == 1">
-                <a (click)="previous()" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li [class.active]="currentPage == page" *ngFor="let page of pages" (click)="changePage(page)">
-                <a>{{ page }}</a>
-            </li>
-            <li [class.disabled]="currentPage == pages.length">
-                <a (click)="next()" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>  
-`
+	templateUrl: './pagination.component.html',
+	styleUrls: ['./pagination.component.css']
 })
+
 export class PaginationComponent implements OnChanges {
   @Input() items = [];
 	@Input('page-size') pageSize = 10;

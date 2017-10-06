@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home.component';
+
 import { NotFoundComponent } from './not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -21,7 +21,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
     NotFoundComponent,
     NavbarComponent
     ],

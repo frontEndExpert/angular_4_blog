@@ -1,6 +1,9 @@
     <div class="postscontainer row">
     <div id="postlist" [class.extraclass]="hidediv" class="container col-md-7">     
+        <div class="nav">
         <app-pagination [items]="posts" (page-changed)="onPageChanged($event)"></app-pagination>
+        </div>
+        <div class="container">
         <ul class="list-group posts">
             <li *ngFor="let post of pagedPosts" class="list-group-item"
              [class.active]="currentPost == post" (click)="select(post)"  >
@@ -8,8 +11,12 @@
             </li>
         </ul>
     </div>
+    </div>
 
     <div id="postbody" [class.extraclass]="!hidediv" class="container col-md-7">
+        <div class="mybtn">
+        <a class="btn " (click)="goback()"> <i class="material-icons">undo</i> Back To Posts List</a>
+    </div>
         <div *ngIf="currentPost" class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Post no. {{ currentPost.id }} : {{ currentPost.title }}</h3>
@@ -19,6 +26,5 @@
                 <hr/>
             </div>
         </div>
-        <input type="button" (click)="goback()" value="Back To Posts List">
-    </div>
+     </div>
 </div>
